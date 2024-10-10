@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/tonapi.ts","./src/vite-env.d.ts","./src/components/jettonitem.tsx","./src/components/jettonlist.tsx","./src/components/logo.tsx","./src/components/sendjettonmodal.tsx","./src/utils/address.ts","./src/utils/decimals.ts","./src/utils/jetton-transfer.ts"],"version":"5.6.2"}
