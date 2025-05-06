@@ -4,6 +4,7 @@ import { toDecimals } from "../utils/decimals";
 import { Address } from "@ton/core";
 import { useTonConnectUI } from "@tonconnect/ui-react";
 import { getJettonTransaction } from "../utils/jetton-transfer";
+import { trackTransactionByBoc } from "../utils/hash-transaction";
 
 interface SendJettonModalProps {
   jetton: JettonBalance;
@@ -33,7 +34,9 @@ export const SendJettonModal = ({
 
       tonConnectUI
         .sendTransaction(transaction)
-        .then(() => {
+        .then(({boc}) => {
+          trackTransactionByBoc(boc)
+
           setError(null);
           onClose();
         })
