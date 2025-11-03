@@ -6,5 +6,5 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [nodePolyfills(),react()],
-  base: '/tonapi-dapp-example/'
+  // base: '/tonapi-dapp-example/' // Only for deployment to GitHub Pages
 })
